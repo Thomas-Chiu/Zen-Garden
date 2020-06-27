@@ -13,11 +13,27 @@ body {
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  margin: 2rem auto 0;
+  margin: 2.5rem auto 0;
+  background: url("../images/wsbg2.jpg") no-repeat left top/cover;
+  z-index: 0;
+}
+
+abbr {
+  text-decoration: none !important;
+  border-bottom: 0px !important;
+}
+
+@media (min-width: 996px) {
+  #carousel_wrapper {
+    width: 100vw;
+    margin-left: -25%;
+  }
+}
+
+#page-wrapper {
   background: url("../images/texture.jpg");
   z-index: -1;
 }
-
 /* navbar---------------------------------------------------------- */
 #sidebar {
   width: 100%;
@@ -26,8 +42,31 @@ body {
   padding: 0;
 }
 
-#sidebar .extra1 {
-  width: 10%;
+#sidebar #followMe {
+  margin-left: auto;
+}
+
+#sidebar #followMe a {
+  color: #911d22;
+  font-size: 2rem;
+  margin: 0 0.25rem;
+}
+
+#sidebar #followMe a:hover {
+  color: #000;
+}
+
+#sidebar .navbar-brand {
+  width: 27.5%;
+}
+
+#sidebar .navbar-brand::after {
+  content: "CSS Zen Garden";
+  font-size: 2rem;
+  font-weight: bo;
+  position: fixed;
+  top: 2rem;
+  left: 7.5rem;
 }
 
 #sidebar .extra1 img {
@@ -50,18 +89,19 @@ body {
 
 #sidebar .navbar-nav {
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
-  margin-left: 15%;
+  margin-left: 7.5%;
 }
 
 /* carousel-------------------------------------------------------- */
 #carousel {
-  z-index: -1;
+  z-index: -3;
   position: relative;
+  width: 100%;
 }
 
-#carousel .carousel-text {
+#carousel h2 {
   position: absolute;
   color: #fff;
   text-align: center;
@@ -69,7 +109,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 1;
+}
+
+#carousel h1 {
+  /* visibility: hidden; */
+  display: none;
 }
 
 /* footer --------------------------------------------------------- */
@@ -78,6 +123,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 110vw;
+  position: absolute;
+  left: -50%;
 }
 
 #footer a {
