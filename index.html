@@ -4,9 +4,8 @@
     <meta charset="utf-8" />
     <title>CSS Zen Garden: The Beauty of CSS Design</title>
     <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/css_garden_style.css" />
-    <!-- <link rel="stylesheet" media="screen" href="style.css?v=8may2013"> -->
-    <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Dave Shea" />
     <meta
@@ -14,20 +13,53 @@
       content="A demonstration of what can be accomplished visually through CSS-based design."
     />
     <meta name="robots" content="all" />
-    <!--[if lt IE 9]>
-      <script src="script/html5shiv.js"></script>
-    <![endif]-->
   </head>
 
   <body id="css-zen-garden">
     <div id="page-wrapper" class="page-wrapper">
-      <section id="zen-intro" class="intro">
-        <header id="banner" role="banner">
-          <h1>CSS Zen Garden</h1>
-          <h2>
-            The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design
-          </h2>
-        </header>
+      <section id="zen-intro">
+        <div
+          id="carousel"
+          class="extra3 carousel slide carousel-fade"
+          data-ride="carousel"
+        >
+          <header id="banner" class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/jimi_slider.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/new_sliders-10.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/new_sliders-11.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/new_sliders-12.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/painted_bus.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/Crocker.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/CSN3.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/RH.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/Santana_OnStage.jpg" class="d-block w-100" />
+            </div>
+          </header>
+          <div class="extra4 carousel-text">
+            <h1>CSS Zen Garden</h1>
+            <h2>
+              The Beauty of
+              <abbr title="Cascading Style Sheets">CSS</abbr> Design
+            </h2>
+          </div>
+        </div>
         <div id="zen-summary" class="summary" role="article">
           <p>
             A demonstration of what can be accomplished through
@@ -254,75 +286,86 @@
           >
         </footer>
       </div>
-      <aside id="sidebar" class="sidebar" role="complementary">
-        <div id="wrapper" class="wrapper">
-          <div id="design-selection" class="design-selection">
-            <h3 class="select">Select a Design:</h3>
-            <nav role="navigation">
+      <aside id="sidebar" class="navbar fixed-top navbar-light">
+        <div class="extra1">
+          <a class="navbar-brand p-0" href="#"
+            ><img src="./images/header_logo.png"
+          /></a>
+        </div>
+        <button
+          class="extra2 navbar-toggler ml-auto"
+          data-toggle="collapse"
+          data-target="#wrapper"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="wrapper" class="collapse navbar-collapse">
+          <div id="design-selection" class="navbar-nav">
+            <h3>Select a Design:</h3>
+            <nav>
               <ul>
-                <li>
-                  <a href="/221/" class="design-name">Mid Century Modern</a> by
-                  <a href="http://andrewlohman.com/" class="designer-name"
+                <li class="nav-item">
+                  <a href="/221/" class="nav-link">Mid Century Modern</a>
+                  by
+                  <a href="http://andrewlohman.com/" class="nav-link"
                     >Andrew Lohman</a
                   >
                 </li>
-                <li>
-                  <a href="/220/" class="design-name">Garments</a> by
-                  <a href="http://danielmall.com/" class="designer-name"
-                    >Dan Mall</a
-                  >
+                <li class="nav-item">
+                  <a href="/220/" class="nav-link">Garments</a> by
+                  <a href="http://danielmall.com/" class="nav-link">Dan Mall</a>
                 </li>
-                <li>
-                  <a href="/219/" class="design-name">Steel</a> by
-                  <a href="http://steffen-knoeller.de" class="designer-name"
+                <li class="nav-item">
+                  <a href="/219/" class="nav-link">Steel</a> by
+                  <a href="http://steffen-knoeller.de" class="nav-link"
                     >Steffen Knoeller</a
                   >
                 </li>
-                <li>
-                  <a href="/218/" class="design-name">Apothecary</a> by
-                  <a href="http://trentwalton.com" class="designer-name"
+                <li class="nav-item">
+                  <a href="/218/" class="nav-link">Apothecary</a> by
+                  <a href="http://trentwalton.com" class="nav-link"
                     >Trent Walton</a
                   >
                 </li>
-                <li>
-                  <a href="/217/" class="design-name">Screen Filler</a> by
-                  <a href="http://elliotjaystocks.com/" class="designer-name"
+                <li class="nav-item">
+                  <a href="/217/" class="nav-link">Screen Filler</a> by
+                  <a href="http://elliotjaystocks.com/" class="nav-link"
                     >Elliot Jay Stocks</a
                   >
                 </li>
-                <li>
-                  <a href="/216/" class="design-name">Fountain Kiss</a> by
-                  <a href="http://jeremycarlson.com" class="designer-name"
+                <li class="nav-item">
+                  <a href="/216/" class="nav-link">Fountain Kiss</a> by
+                  <a href="http://jeremycarlson.com" class="nav-link"
                     >Jeremy Carlson</a
                   >
                 </li>
-                <li>
-                  <a href="/215/" class="design-name">A Robot Named Jimmy</a> by
-                  <a href="http://meltmedia.com/" class="designer-name"
-                    >meltmedia</a
-                  >
+                <li class="nav-item">
+                  <a href="/215/" class="nav-link">A Robot Named Jimmy</a> by
+                  <a href="http://meltmedia.com/" class="nav-link">meltmedia</a>
                 </li>
-                <li>
-                  <a href="/214/" class="design-name">Verde Moderna</a> by
-                  <a href="http://www.mezzoblue.com/" class="designer-name"
+                <li class="nav-item">
+                  <a href="/214/" class="nav-link">Verde Moderna</a> by
+                  <a href="http://www.mezzoblue.com/" class="nav-link"
                     >Dave Shea</a
                   >
                 </li>
               </ul>
             </nav>
           </div>
-          <div id="design-archives" class="design-archives">
-            <h3 class="archives">Archives:</h3>
-            <nav role="navigation">
+          <div id="design-archives" class="navbar-nav">
+            <h3>Archives:</h3>
+            <nav>
               <ul>
-                <li class="next">
-                  <a href="/214/page1"
+                <li class="nav-item">
+                  <a href="/214/page1" class="nav-link"
                     >Next Designs <span class="indicator">&rsaquo;</span></a
                   >
                 </li>
-                <li class="viewall">
+                <li class="nav-item">
                   <a
                     href="http://www.mezzoblue.com/zengarden/alldesigns/"
+                    class="nav-link"
                     title="View every submission to the Zen Garden."
                   >
                     View All Designs
@@ -331,11 +374,12 @@
               </ul>
             </nav>
           </div>
-          <div id="zen-resources" class="zen-resources">
-            <h3 class="resources">Resources:</h3>
+          <div id="zen-resources" class="navbar-nav">
+            <h3>Resources:</h3>
             <ul>
-              <li class="view-css">
+              <li class="nav-item">
                 <a
+                  class="nav-link"
                   href="style.css"
                   title="View the source CSS file of the currently-viewed design."
                 >
@@ -343,32 +387,36 @@
                   <abbr title="Cascading Style Sheets">CSS</abbr>
                 </a>
               </li>
-              <li class="css-resources">
+              <li class="nav-item">
                 <a
+                  class="nav-link"
                   href="http://www.mezzoblue.com/zengarden/resources/"
                   title="Links to great sites with information on using CSS."
                 >
                   <abbr title="Cascading Style Sheets">CSS</abbr> Resources
                 </a>
               </li>
-              <li class="zen-faq">
+              <li class="nav-item">
                 <a
+                  class="nav-link"
                   href="http://www.mezzoblue.com/zengarden/faq/"
                   title="A list of Frequently Asked Questions about the Zen Garden."
                 >
                   <abbr title="Frequently Asked Questions">FAQ</abbr>
                 </a>
               </li>
-              <li class="zen-submit">
+              <li class="nav-item">
                 <a
+                  class="nav-link"
                   href="http://www.mezzoblue.com/zengarden/submit/"
                   title="Send in your own CSS file."
                 >
                   Submit a Design
                 </a>
               </li>
-              <li class="zen-translations">
+              <li class="nav-item">
                 <a
+                  class="nav-link"
                   href="http://www.mezzoblue.com/zengarden/translations/"
                   title="View translated versions of this page."
                 >
@@ -381,10 +429,6 @@
       </aside>
     </div>
 
-    <div class="extra1" role="presentation"></div>
-    <div class="extra2" role="presentation"></div>
-    <div class="extra3" role="presentation"></div>
-    <div class="extra4" role="presentation"></div>
     <div class="extra5" role="presentation"></div>
     <div class="extra6" role="presentation"></div>
 
