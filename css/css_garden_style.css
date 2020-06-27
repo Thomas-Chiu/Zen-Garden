@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: "Impact", "jmh_psychedelic_capsregular", "Noto Sans TC",
-    "微軟正黑體", sans-serif;
   box-sizing: border-box;
 }
 
@@ -18,11 +16,7 @@ body {
   background: url("../images/wsbg2.jpg") no-repeat left top/cover;
   z-index: 0;
   font-size: small;
-}
-
-abbr {
-  text-decoration: none !important;
-  border-bottom: 0px !important;
+  font-family: "Impact";
 }
 
 @font-face {
@@ -33,6 +27,56 @@ abbr {
   font-style: normal;
 }
 
+abbr {
+  text-decoration: none !important;
+  border-bottom: 0px !important;
+}
+
+/* a 底線動畫效果 */
+a {
+  color: #911d22;
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.25s ease;
+}
+
+a:hover::before {
+  width: 100%;
+  background: #911d22;
+}
+
+a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #911d22;
+  transition: width 0.25s ease;
+}
+
+a:hover::after {
+  width: 100%;
+  background: transparent;
+}
+
+/* RWD-lg */
 @media (min-width: 996px) {
   body {
     overflow-x: hidden;
@@ -43,15 +87,23 @@ abbr {
     margin-left: -17.5%;
   }
 
-  #footer {
-    width: 100vw;
-    position: absolute;
-    left: -17.5%;
+  #carousel h2 {
+    font-size: 3rem !important;
   }
 
   #zen-supporting .nav-pills {
     display: flex;
     flex-direction: column;
+  }
+
+  #nav-tabContent {
+    margin-top: 0rem !important;
+  }
+
+  #footer {
+    width: 100vw;
+    position: absolute;
+    left: -17.5%;
   }
 }
 
@@ -128,10 +180,14 @@ abbr {
 }
 
 #carousel h2 {
+  width: 100%;
   position: absolute;
   color: #fff;
   text-align: center;
   text-shadow: 0 0 5px #000;
+  font-family: "jmh_psychedelic_capsregular";
+  font-size: 2.5rem;
+  letter-spacing: 2.5px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -139,7 +195,6 @@ abbr {
 }
 
 #carousel h1 {
-  /* visibility: hidden; */
   display: none;
 }
 
@@ -149,9 +204,24 @@ abbr {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-flow: row wrap;
-  margin: 2.5rem 0;
+  margin-bottom: 2rem;
   padding: 0 3rem;
   font-size: large;
+}
+
+#nav-tabContent {
+  font-family: "Courgette", cursive;
+  margin-top: 3rem;
+}
+
+#nav-tabContent h3 {
+  font-weight: bold;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #911d22;
 }
 
 /* footer --------------------------------------------------------- */
