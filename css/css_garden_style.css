@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-family: "Impact", "jmh_psychedelic_capsregular", "Noto Sans TC",
+    "微軟正黑體", sans-serif;
   box-sizing: border-box;
 }
 
@@ -13,9 +14,10 @@ body {
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  margin: 2.5rem auto 0;
+  margin: 2.75rem auto 0;
   background: url("../images/wsbg2.jpg") no-repeat left top/cover;
   z-index: 0;
+  font-size: small;
 }
 
 abbr {
@@ -23,10 +25,33 @@ abbr {
   border-bottom: 0px !important;
 }
 
+@font-face {
+  font-family: "jmh_psychedelic_capsregular";
+  src: url("../webfonts/jmh_psychedelic_caps-webfont.woff2") format("woff2"),
+    url("../webfonts/jmh_psychedelic_caps-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media (min-width: 996px) {
+  body {
+    overflow-x: hidden;
+  }
+
   #carousel_wrapper {
     width: 100vw;
-    margin-left: -25%;
+    margin-left: -17.5%;
+  }
+
+  #footer {
+    width: 100vw;
+    position: absolute;
+    left: -17.5%;
+  }
+
+  #zen-supporting .nav-pills {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -48,7 +73,7 @@ abbr {
 
 #sidebar #followMe a {
   color: #911d22;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0 0.25rem;
 }
 
@@ -57,13 +82,15 @@ abbr {
 }
 
 #sidebar .navbar-brand {
-  width: 27.5%;
+  width: 22.5%;
 }
 
 #sidebar .navbar-brand::after {
   content: "CSS Zen Garden";
+  font-family: "jmh_psychedelic_capsregular";
   font-size: 2rem;
-  font-weight: bo;
+  font-weight: bold;
+  letter-spacing: 2.5px;
   position: fixed;
   top: 2rem;
   left: 7.5rem;
@@ -76,14 +103,13 @@ abbr {
 
 #sidebar h3 {
   color: rgba(255, 255, 255, 0.8);
-  font-weight: bold;
   margin: 0;
   padding: 0;
 }
 
 #sidebar .nav-link {
   display: inline-block;
-  margin: 0.25% 0;
+  margin: 0.5% 0;
   padding: 0;
 }
 
@@ -117,18 +143,27 @@ abbr {
   display: none;
 }
 
+/* nav-pills------------------------------------------------------- */
+#zen-supporting {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  margin: 2.5rem 0;
+  padding: 0 3rem;
+  font-size: large;
+}
+
 /* footer --------------------------------------------------------- */
 #footer {
   background: url("../images/footer_bg.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110vw;
-  position: absolute;
-  left: -50%;
 }
 
 #footer a {
+  font-family: "Noto Sans TC";
   margin: 2rem;
   color: #fff;
   font-size: 1.5rem;
