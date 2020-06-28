@@ -55,7 +55,7 @@ a::before {
   transition: width 0.25s ease;
 }
 
-a:hover::before {
+a:not(.navbar-brand):hover::before {
   width: 100%;
   background: #911d22;
 }
@@ -71,7 +71,7 @@ a::after {
   transition: width 0.25s ease;
 }
 
-a:hover::after {
+a:not(.navbar-brand):hover::after {
   width: 100%;
   background: transparent;
 }
