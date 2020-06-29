@@ -77,6 +77,14 @@ a:not(.navbar-brand):hover::after {
 }
 
 /* RWD-lg */
+@media (max-width: 996px) {
+  #sidebar .navbar-toggler {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+  }
+}
+
 @media (min-width: 996px) {
   body {
     overflow-x: hidden;
@@ -91,6 +99,10 @@ a:not(.navbar-brand):hover::after {
     font-size: 3rem !important;
   }
 
+  #sidebar .followMe {
+    display: block !important;
+  }
+
   #zen-supporting .nav-pills {
     display: flex;
     flex-direction: column;
@@ -100,10 +112,8 @@ a:not(.navbar-brand):hover::after {
     margin-top: 0rem !important;
   }
 
-  #footer {
-    width: 100vw;
-    position: absolute;
-    left: -17.5%;
+  #footer .followMe {
+    display: none;
   }
 }
 
@@ -119,17 +129,18 @@ a:not(.navbar-brand):hover::after {
   padding: 0;
 }
 
-#sidebar #followMe {
+#sidebar .followMe {
   margin-left: auto;
+  display: none;
 }
 
-#sidebar #followMe a {
+#sidebar .followMe a {
   color: #911d22;
   font-size: 1.75rem;
   margin: 0 0.25rem;
 }
 
-#sidebar #followMe a:hover {
+#sidebar .followMe a:hover {
   color: #000;
 }
 
@@ -227,16 +238,18 @@ a:not(.navbar-brand):hover::after {
 /* footer --------------------------------------------------------- */
 #footer {
   background: url("../images/footer_bg.jpg");
-  display: flex;
+}
+
+#footer .row {
   justify-content: center;
   align-items: center;
 }
 
 #footer a {
   font-family: "Noto Sans TC";
-  margin: 2rem;
+  margin: 1rem;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bolder;
 }
 
