@@ -77,15 +77,19 @@ a:not(.navbar-brand):hover::after {
 }
 
 /* RWD-lg */
-@media (max-width: 996px) {
+@media (max-width: 991px) {
   #sidebar .navbar-toggler {
     position: absolute;
     top: 0%;
     right: 0%;
   }
+
+  #nav-tabContent {
+    margin: 3rem 0;
+  }
 }
 
-@media (min-width: 996px) {
+@media (min-width: 992px) {
   body {
     overflow-x: hidden;
   }
@@ -103,6 +107,10 @@ a:not(.navbar-brand):hover::after {
     display: block !important;
   }
 
+  #zen-supporting {
+    height: 100vmax;
+  }
+
   #zen-supporting .nav-pills {
     display: flex;
     flex-direction: column;
@@ -112,8 +120,32 @@ a:not(.navbar-brand):hover::after {
     margin-top: 0rem !important;
   }
 
+  #footer {
+    width: 105vw;
+    position: absolute;
+    left: -20%;
+  }
+
   #footer .followMe {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  #zen-supporting {
+    height: 75vmax;
+  }
+}
+
+@media (min-width: 1400px) {
+  #zen-supporting {
+    height: 50vmax;
+  }
+}
+
+@media (min-width: 1700px) {
+  #zen-supporting {
+    height: 35vmax;
   }
 }
 
@@ -222,7 +254,7 @@ a:not(.navbar-brand):hover::after {
 
 #nav-tabContent {
   font-family: "Courgette", cursive;
-  margin-top: 3rem;
+  /* margin: 3rem; */
 }
 
 #nav-tabContent h3 {
