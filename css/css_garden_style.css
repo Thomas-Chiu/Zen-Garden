@@ -14,6 +14,7 @@ body {
   position: relative;
   margin: 2.75rem auto 0;
   background: url("../images/wsbg2.jpg") no-repeat left top/cover;
+  background-attachment: fixed;
   z-index: 0;
   font-size: small;
   font-family: "Impact";
@@ -151,6 +152,7 @@ a:not(.navbar-brand):hover::after {
 
 #page-wrapper {
   background: url("../images/texture.jpg");
+  background-attachment: fixed;
   z-index: -1;
 }
 /* navbar---------------------------------------------------------- */
